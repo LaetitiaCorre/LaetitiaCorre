@@ -1,3 +1,12 @@
+:root {
+  --pink: rgb(255, 219, 225);
+  --blue: #9bc5d5;
+  --green: #002926;
+  --brown: #ba975f;
+  --beige: #efe6df;
+  --grey: #f8f8f8;
+}
+
 body {
   margin: 0;
 }
@@ -34,7 +43,7 @@ h1 {
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
-  background-color: #3c3c3b;
+  background-color: var(--green);;
   color: white;
   padding: 0px 10px;
   box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.219),inset 0 -1px 0 rgba(0,0,0,.1);
@@ -51,12 +60,11 @@ h1 {
 .iconsRéseaux {
   display: flex;
   flex-direction: row;
-  padding-bottom: 30px;
+  justify-content: flex-end;
   align-items: center;
-  padding-top: 20px;
   font-size: 20px;
   margin-right: 30px;
-  color: rgb(162, 195, 255);
+  color: var(--brown);
 }
 
 .réseauxPro{
@@ -64,6 +72,11 @@ h1 {
   display: flex;
   flex-direction: row; 
   opacity: 1;
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 .menu {
@@ -80,8 +93,13 @@ h1 {
 
 .menuLeft {
   font-family: 'Dancing Script', cursive;
-  font-size: 40px;
+  font-size: 60px;
   margin: 30px 100px;
+}
+
+.menuLeft textshadow:hover {
+  color: var(--pink);
+  text-shadow: 2px 4px #9bc5d5;
 }
 
 .menuRight {
@@ -91,13 +109,14 @@ h1 {
   margin-right: 60px;
 }
 
-.menuRight li:hover{
-  color: white;
+.menuRight a:hover{
+  color: var(--brown) ;
 }
 
 
 .listMenu >li {
   margin-right: 20px;
+  list-style: none;
 }
 
 .listMenu {
@@ -105,13 +124,12 @@ h1 {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: nowrap;
-  list-style: none;
-  text-decoration: none;
+  color: var(--brown)
 }
 
 .jumboTron {
   position: relative;
-  height: calc(100vh - 38px);
+  height: calc(100vh - 60px);
 }
 
 .image {
@@ -232,52 +250,49 @@ p {
   color: #6c6c6c;
   text-transform: uppercase; 
 }
+/*blocCompétences*/
+.compétences { 
+  box-shadow: 0 .3rem 1rem rgba(219, 219, 219, 0.226),inset 0 -1px 0 rgba(131, 131, 131, 0.1); 
+}
 
-.skill {
+.bloc1compé {
   display: flex;
   flex-direction: row;
-  text-align: center;
 }
 
-.compétences {
-  padding-bottom: 50px;  
-  box-shadow: 0 .3rem 1rem rgba(219, 219, 219, 0.226),inset 0 -1px 0 rgba(131, 131, 131, 0.1);
-}
-
-.compé {
-  text-align: center;  
-}
-
-.skillLeft {
+.bloc2compé {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-.skillRight {
-  display: flex;
-  flex-direction: column;
+.widthbloc {
+  width: 215px;
+  height: 250px;
+  background-color: var(--pink);
+  border: 1px solid black;
+  background-repeat: no-repeat;
+  background-size: 140px auto;
+  background-position: center;
 }
 
-.allSkill {
-  background-color: #979797;
-  width: 400px;
-  border-radius: 20px;
-  margin: 20px 20% ;
+.jquery, .javaScript {
+  background-size: 170px auto;
 }
+/*FinblocCompétences*/
 
 .hobbies {
-  background-image: url('/images/wave.svg');
-  background-repeat: no-repeat;
-  background-position: bottom;
+  background-color: var(--green);
   flex-direction: row;
   height: 250px;
   color: pink;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .passion {
   text-align: center;
-  font-size: 60px;
+  font-size: 50px;
 }
 
 .instagram {
@@ -313,7 +328,7 @@ p {
 }
 
 .socialmedia {
-background-color: #b3b3b3;
+background-color: var(--pink);
 }
 
 .iconsocial {
@@ -333,11 +348,99 @@ background-color: #b3b3b3;
 }
 
 footer {
-  background-color: #3c3c3b;
+  background-color: #002926;
   text-align: center;
   color: #fff;
   padding: 8px 0;
   font-size: 15px;
 }
 
+/* PARTIE PROJET*/
 
+.borderShad {
+  box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.568),inset 0 -1px 0 rgba(35, 35, 35, 0.184);
+}
+
+.proj {
+  text-align: left;
+  padding: 0 20px;
+  line-height: 40px;
+}
+
+.proj span{
+  font-weight: bold;
+}
+
+.titleProject {
+  font-family: 'Oxygen';
+  text-transform: uppercase;
+  font-size: 30px;
+  text-align: center;
+}
+
+.project {
+  display: flex;
+  flex-direction: row;
+}
+
+.rightdes {
+  background-color: var(--green);
+  width: 50%;
+  color: var(--beige);
+}
+
+.leftdes {
+  background-color: var(--beige);
+  width: 50%;
+  
+}
+
+.imgProject {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.picture {
+  width: 50%;
+
+}
+
+.descripProject {
+  text-align: center;
+  align-items: center;
+  width: 50%;
+}
+
+/* FIN PROJET */
+
+.containerContact {
+  display: flex;
+  align-items: center; 
+  background-color: #f4f4f4;
+  height: 350px;
+}
+
+.carteVisite {
+  background-image: url('/images/carteVisite.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
+  background-color: #ffffff;
+  box-shadow: 0 .4rem 1rem rgba(0, 0, 0, 0.185),inset 0 -1px 0 rgba(35, 35, 35, 0.184);  
+  width: 450px;
+  height: 225px;
+  margin: 50px auto;
+  padding-top: 30px; 
+  border-radius: 3px;
+}
+
+.nomContact {
+  font-family: 'Dancing Script', cursive;
+  text-transform: none;
+  padding-left: 30px;
+}
+
+.contact {
+  text-align: center;
+}
