@@ -4,11 +4,13 @@
   "description": "Création de mon portfolio",
   "main": "index.js",
   "scripts": {
-    "start": "http-server www -o"
+    "start": "http-server www -o",
+    "deploy": "gh-pages -d www"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "html-includes": "^1.2.3",
     "http-server": "^0.11.1"
   }
