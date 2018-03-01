@@ -12,8 +12,9 @@ body {
 }
 
 .container {
-  width: 1291px;
+  max-width: 1291px;
   font-family: 'Oxygen';
+  margin: 0 auto;
 }
 
 i:hover {
@@ -88,13 +89,14 @@ a {
   flex-wrap: nowrap;
   align-items: center;
   z-index: 5;
-  width: 1291px;
+  width: 100%;
 }
 
 .menuLeft {
   font-family: 'Dancing Script', cursive;
   font-size: 60px;
   margin: 30px 100px;
+
 }
 
 .menuLeft textshadow:hover {
@@ -129,7 +131,12 @@ a {
 
 .jumboTron {
   position: relative;
-  height: calc(100vh - 60px);
+
+}
+
+#slides {
+  position: relative;
+  z-index: 0;
 }
 
 .image {
@@ -139,7 +146,7 @@ a {
   background-size: cover;
 }
 
-.firstImage {
+/* .firstImage {
   z-index: 2;
   background-image: url(images/Soujibackground2.jpg);
 }
@@ -152,7 +159,7 @@ a {
 .thirdImage {
   z-index: 3;
   background-image: url(images/third.jpg);
-}
+} */
 
 .blocAbout {
   margin: 20px 150px 0px 150px;
@@ -443,4 +450,40 @@ footer {
 
 .contact {
   text-align: center;
+}
+
+
+@media screen and (max-width:1290px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width:640px) {
+  .container {
+    width: 100%;
+  }
+
+  .menuLeft {
+    width: 30%;
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  .menuRight {
+    width: 70%;
+  }
+  
+  .leftdes {
+    width: 100%;
+  }
+  .rightdes {
+    width: 100%;
+  }
+
+  .project {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 }
