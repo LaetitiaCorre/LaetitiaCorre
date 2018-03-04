@@ -1,6 +1,9 @@
 $(function(){
   $("#slides").slidesjs({
     width: 700,
-    height: 293,
+    height: 323,
+    navigation: {
+      active: false
+    }
   });
 });
