@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Laetitia Corre</title>
   <link href="https://fonts.googleapis.com/css?family=Dancing+Script:400,700|Oxygen:400,700" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cairo|Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -18,24 +18,20 @@
     <section class="header">
       <div class="headerRight"></div>
       <nav class="headerLeft">
-        <ul class="iconsRéseaux">
-          <li class="réseauxPro"><i class="fa fa-github" aria-hidden="true"></i></li>
-          <li class="réseauxPro"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-          <li class="réseauxPro"><i class="fa fa-slack" aria-hidden="true"></i></li>
-          <li class="réseauxPro"><i class="fa fa-linkedin" aria-hidden="true"></i></li>
+        <ul class="headerIcons">
+          <li class="réseauxPro"><a href="https://github.com/LaetitiaCorre"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+          <li class="réseauxPro"><a href="https://github.com/LaetitiaCorre"><i class="fa fa-twitter" aria-hidden="true"></i></a></i></li>
+          <li class="réseauxPro"><a href="https://github.com/LaetitiaCorre"><i class="fa fa-slack" aria-hidden="true"></i></a></li>
+          <li class="réseauxPro"><a href="https://www.linkedin.com/in/laetitia-corre/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         </ul>
       </nav>
-      
-      
     </section>
 
     <section class="jumboTron">
-      <div class="menu">
-        <div class="menuLeft textshadow">
-          Laetitia Corré
-        </div>
-        <nav class="menuRight">
-          <ul class="listMenu">
+      <div class="jumboMenu">
+        <div class="jumboMenuName nameShadow">Laetitia Corré</div>
+        <nav class="jumboMenuList">
+          <ul class="menuList">
             <li><a href="#apropos">A propos</a></li>
             <li><a href="#projet">Projets</a></li>
             <li><a href="#compétence">Compétences</a></li>
@@ -43,80 +39,131 @@
           </ul>
         </nav>
       </div>
-      <div class="image firstImage"></div>
+      <div id="slides">
+        <img src="images/Soujibackground2.jpg">
+        <img src="images/sec.jpg">
+        <img src="images/third.jpg">
+      </div>
+      <!--<div class="image firstImage"></div>
       <div class="image secondImage"></div>
-      <div class="image thirdImage"></div>
+      <div class="image thirdImage"></div>-->
     </section>
 
-    <section id="apropos" class="aPropos">
-      <div class="blocAbout">
-<!--<div class="character"></div>-->
-<h1>à propos de moi</h1>
-<div class="surligneur"></div>
-<p class="description"> Bienvenue sur mon portfolio, moi c'est laetitia j'ai 27 ans et je suis originaire de la RéunionJe suis actuellement apprenante au métiers de développeur Front à Simplon, ou Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam dui ipsum, iaculis sed justo a, congue maximus enim. Donec sed purus vel diam ornare faucibus. Etiam ornare eros nisi, vitae facilisis lorem tristique viverra. Nulla ullamcorper orci nec orci euismod luctus sit amet at ipsum. Proin a auctor velit. Integer sodales mauris eu lorem elementum vulputate. Mauris et purus quis ipsum pharetra finibus. Fusce semper purus nec hendrerit consequat. Nulla sollicitudin velit eget vestibulum ultrices.</p>
+    <section id="apropos" class="about">
+      <div class="aboutBlock">
+        <h1>Qui suis-je ?</h1>
+        <p class="description">Bonjour à vous et bienvenue sur mon portfolio. Je m'appelle Laetitia j'ai 27 ans et je suis Developpeuse Front-End Junior à Lyon. Auparavant je faisait des études de jeu vidéo à la Réunion. Aujourd'hui j'ai décidé de rajouter une corde à mon arc en intégrant Simplon villeurbanne pour apprendre le métier de développeuse Front-End. Actuellement je suis à la recherches d'une entreprise ou je pourrai effectuer mon contrat de profesionnalisation mais pas seulement. Une entreprise ou je puisse m'épanouir avec le groupe, partarger, creer dans une ambiance agréable ou tout le monde partage la meme passion.</p>
       </div>
-      
+      <img class="character" src="cv/images/photocv.png">
     </section>
 
     <section class="xp">
       <h1>Expériences</h1>
-      <div class="surligneur"></div>
-      <div class="entreprises">
-        <div class="ageod left">
-          <p class="job">Graphiste 2D</p>
-          <p class="boite">Ageod</p>
+
+      <div class="xpEntreprises">
+        <div class="xpNameJob xpLeft">
+          <p class="xpNamePoste">Graphiste 2D</p>
+          <p class="xpNameBoite">Ageod</p>
         </div>
-        <div class="ageod right">
-          <span class="circle"></span>       
-          <p class="desc">Illustration, conception map, game ui, colorisation</p>
+
+        <div class="xpNameJob xpRight">
+          <span class="xpCircle"></span> 
+          <p class="xpDescription">Illustration, conception map, game ui, colorisation</p>
         </div>
       </div>   
 
-      <div class="entreprises">
-        <div class="gamayun left">
-            <p class="desc">Game design document, illustration, conception 3D,  animation  </p>
-        </div>
-        <div class="gamayun right">
-            <span class="circle"></span>
-            <p class="job">Graphiste 2D,3D</p>
-            <p class="boite">Gamayun</p>
-        </div>
-      </div> 
-      
-      <div class="entreprises">
-        <div class="dream left">
-          <p class="job">Graphiste 2D,3D</p>
-          <p class="boite">Dream-Up</p>
-        </div>
-        <div class="dream right">
-          <span class="circle"></span>          
-          <p class="desc">Illustration, colorisation, conception 3D, animation, intégration</p>
-        </div>
-      </div> 
+      <div class="xpEntreprises">
 
-      <div class="entreprises">
-        <div class="restau left">
-          <p class="desc">Serveuse polyvalente</p>    
+        <div class="xpNameJob xpLeft">
+          <p class="xpNamePoste">Graphiste 2D,3D</p>
+          <p class="xpNameBoite">Gamayun</p>
         </div>
-        <div class="restau right">
-          <span class="circle"></span>
-          <p class="job">Serveuse polyvalente</p>
-          <p class="boite">Courtepaille / Al-Maida</p>
+
+        <div class="xpNameJob xpRight">
+          <span class="xpCircle"></span>     
+          <p class="xpDescription">Game design document, illustration, conception 3D, animation</p>
+        </div>
+      </div>  
+
+      <div class="xpEntreprises">
+
+        <div class="xpNameJob xpLeft">
+          <p class="xpNamePoste">Graphiste 2D,3D</p>
+          <p class="xpNameBoite">Dream-Up</p>
+        </div>
+
+        <div class="xpNameJob xpRight">
+          <span class="xpCircle"></span>     
+          <p class="xpDescription">Illustration, colorisation, conception 3D, animation, intégration</p>
+        </div>
+      </div>
+
+      <div class="xpEntreprises">
+        <div class="xpNameJob xpLeft">
+          <p class="xpNamePoste">Serveuse polyvalente</p>
+          <p class="xpNameBoite">Courtepaille / Al-Maida</p>
+        </div>
+
+        <div class="xpNameJob xpRight">
+          <span class="xpCircle"></span>     
+          <p class="xpDescription">Serveuse polyvalente dans la restauration rapide. </p>
         </div>
       </div> 
     </section>
 
     <!--PARTIE PROJET-->
 
-    <div id="projet">
-      <div class="borderShad">
+    <div id="projet" class="projectContainer">
 
-        <div class="project">
-          <a class="picture pic1">
-            <img class="imgProject" src="/images/captureOtome.png" alt="#">
-          </a>
-          <div class="descripProject rightdes">
-            <h3 class="titleProject">twu-ail-lite</h3>
+      <div class="projectBlock">
+        <div class="projectPicture" style="background-image:url(/images/captureOtome.png)" ></div>
+        <div class="picture projectBlockDes">
+          <div class="projectDescription">
+            <h3 class="projectTitle">twu-ail-lite</h3>
+            <div class="proj">
+              <p><span>Date de création</span> : Janvier 2018</p>
+              <p><span>Langages</span> : HTML/CSS, JavaScript</p>
+              <p><span>Description</span> : Projet personnel qui consistait à créer un jeu pour mettre en pratique la programmation orienté objet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projectBlock">
+        <div class="projectPicture" style="background-image:url(/images/captureMaisondumonde.png)" ></div>
+        <div class="picture projectBlockDes">
+          <div class="projectDescription">
+            <h3 class="projectTitle">Maison du Monde</h3>
+            <div class="proj">
+              <p><span>Date de création</span> : Décembre 2017
+              </p>
+              <p><span>Langages</span> : HTML/CSS</p>
+              <p><span>Description</span> : Premier projet au sein de Simplon. On devait reprendre une page d'acceuil d'un site que l'on aimait, pour pouvoir assimiler le HTML et CSS. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="projectBlock">
+        <div class="projectPicture" style="background-image:url(/images/captureMaisondumonde.png)" ></div>
+        <div class="picture projectBlockDes">
+          <div class="projectDescription">
+            <h3 class="projectTitle">To Do List</h3>
+            <div class="proj">
+              <p><span>Date de création</span> : Décembre 2017
+              </p>
+              <p><span>Langages</span> : HTML/CSS</p>
+              <p><span>Description</span> : Premier projet au sein de Simplon. On devait reprendre une page d'acceuil d'un site que l'on aimait, pour pouvoir assimiler le HTML et CSS. </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projectBlock">
+        <div class="projectPicture" style="background-image:url(/images/captureMaisondumonde.png)" ></div>
+        <div class="picture projectBlockDes">
+          <div class="projectDescription">
+            <h3 class="projectTitle">Blog</h3>
             <div class="proj">
               <p><span>Date de création</span> : Janvier 2018
               </p>
@@ -125,26 +172,13 @@
             </div>
           </div>
         </div>
-    
-        <div class="project">
-          <div class="descripProject leftdes">
-            <div class="proj">
-              <h3 class="titleProject">Maison du Monde</h3>
-              <p><span>Date de création</span> : Décembre 2017
-              </p>
-              <p><span>Langages</span> : HTML/CSS</p>
-              <p><span>Description</span> : Premier projet au sein de Simplon. On devait reprendre une page d'acceuil d'un site que l'on aimait, pour pouvoir assimiler le HTML et CSS. </p>
-            </div>
-          </div>
-          <a class="picture pic2"><img class="imgProject" src="/images/captureMaisondumonde.png" alt="#"></a>  
-        </div>
-    
-        <div class="project">
-          <a class="picture pic1">
-            <img class="imgProject" src="/images/captureOtome.png" alt="#">
-          </a>
-          <div class="descripProject rightdes">
-            <h3 class="titleProject">twu-ail-lite</h3>
+      </div>
+  
+      <div class="projectBlock">
+        <div class="projectPicture" style="background-image:url(/images/captureMaisondumonde.png)" ></div>
+        <div class="picture projectBlockDes">
+          <div class="projectDescription">
+            <h3 class="projectTitle">Bank</h3>
             <div class="proj">
               <p><span>Date de création</span> : Janvier 2018
               </p>
@@ -153,26 +187,13 @@
             </div>
           </div>
         </div>
+      </div>
 
-        <div class="project">
-          <div class="descripProject leftdes">
-            <div class="proj">
-              <h3 class="titleProject">To Do List</h3>
-              <p><span>Date de création</span> : Décembre 2017
-              </p>
-              <p><span>Langages</span> : HTML/CSS</p>
-              <p><span>Description</span> : Premier projet au sein de Simplon. On devait reprendre une page d'acceuil d'un site que l'on aimait, pour pouvoir assimiler le HTML et CSS. </p>
-            </div>
-          </div>
-          <a class="picture pic2"><img class="imgProject" src="/images/captureMaisondumonde.png" alt="#"></a>  
-        </div>
-
-        <div class="project">
-          <a class="picture pic1">
-            <img class="imgProject" src="/images/captureOtome.png" alt="#">
-          </a>
-          <div class="descripProject rightdes">
-            <h3 class="titleProject">Blog</h3>
+      <div class="projectBlock">
+        <div class="projectPicture" style="background-image:url(/images/captureMaisondumonde.png)" ></div>
+        <div class="picture projectBlockDes">
+          <div class="projectDescription">
+            <h3 class="projectTitle">WordPress</h3>
             <div class="proj">
               <p><span>Date de création</span> : Janvier 2018
               </p>
@@ -181,19 +202,7 @@
             </div>
           </div>
         </div>
-
-        <div class="project">
-          <div class="descripProject leftdes">
-            <div class="proj">
-              <h3 class="titleProject">WordPress</h3>
-              <p><span>Date de création</span> : Décembre 2017
-              </p>
-              <p><span>Langages</span> : HTML/CSS</p>
-              <p><span>Description</span> : Premier projet au sein de Simplon. On devait reprendre une page d'acceuil d'un site que l'on aimait, pour pouvoir assimiler le HTML et CSS. </p>
-            </div>
-          </div>
-          <a class="picture pic2"><img class="imgProject" src="/images/captureMaisondumonde.png" alt="#"></a>  
-        </div>
+      </div>
 
         <iframe height='400' scrolling='no' title='PinkBuy' src='//codepen.io/Elphira/embed/preview/vWgJqK/?height=265&theme-id=0&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/Elphira/pen/vWgJqK/'>PinkBuy</a> by Laëtitia Corré (<a href='https://codepen.io/Elphira'>@Elphira</a>) on <a href='https://codepen.io'>CodePen</a>.
         </iframe>
@@ -277,7 +286,8 @@
     </footer>
   
   </div>
-
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="jquery.slides.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/theaterjs@latest/dist/theater.min.js"></script>
 
   <script>
@@ -293,5 +303,6 @@
         .addScene('laetitia: voyager ++ pour l\'Asie', 400)        
         .addScene(theater.replay)
     </script>
+    <script src="portfolio.js"></script>
 </body>
 </html>
