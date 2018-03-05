@@ -44,7 +44,6 @@ h1 {
 }
 
 .container {
-  max-width: 1291px;
   font-family: 'Oxygen';
   margin: 0 auto;
 }
@@ -336,7 +335,15 @@ p {
 }
 
 .projectContainer {
-  border: 25px solid var(--pink);
+  max-width: 1291px;
+  background-image: url('/images/backgroundProjet.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 30px;
+}
+
+.projetBackground {
+  background-color: white;
 }
 
 .projectBlock {
@@ -346,7 +353,7 @@ p {
 }
 
 .projectPicture {
-  box-shadow: -80px 40px 0px rgb(155, 197, 213);
+  box-shadow: -90px 40px 0px rgb(155, 197, 213);
   position: relative;
   z-index: 1;
   width: 75%;
@@ -354,19 +361,6 @@ p {
   background-repeat: no-repeat;
   background-position: center;
 }
-
-/* .projectFrame {
-  border: var(--blue) 3px solid;
-  border-radius: 5px;
-  position: absolute;
-  width: 345px;
-  height: 525px;
-  z-index: 2;
-  text-align: center;
-  font-size: 25px;
-  right: 135px;
-  padding-top: 20px; 
-} */
 
 .picture {
   width: 50%;
@@ -416,13 +410,15 @@ p {
 }
 
 .projectBlock:nth-child(odd) .projectPicture {
-  box-shadow: 80px 40px 0px var(--pink);
+  box-shadow: 90px 40px 0px var(--pink);
 }
 
 .projectBlock:nth-child(3n+0) .projectPicture {
   margin-top: 40px;
-  box-shadow: 80px 40px 0px var(--greenLight);
+  box-shadow: 90px 40px 0px var(--greenLight);
 }
+
+.
 /* AJOUT  */
 /* ------- Fin Project --------*/
 
