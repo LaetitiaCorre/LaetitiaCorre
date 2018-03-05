@@ -45,7 +45,6 @@ h1 {
 
 .container {
   font-family: 'Oxygen';
-  margin: 0 auto;
 }
 
 .header {
@@ -335,6 +334,7 @@ p {
 }
 
 .projectContainer {
+  margin: 0 auto;
   max-width: 1291px;
   background-image: url('/images/backgroundProjet.svg');
   background-repeat: no-repeat;
