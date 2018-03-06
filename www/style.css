@@ -1,4 +1,10 @@
 :root {
+  --apple: #bfda70;
+  --rose: #f9c1ce;
+  --rosedark: #fbd2d5;
+  --jaune: #fef8bd;
+  --jaunedark: #ffdf91;
+  --ciel: #bfd6ef;
   --pinkBonbon: #ffc2ce;
   --pink: rgb(255, 219, 225);
   --blue: #9bc5d5;
@@ -334,15 +340,18 @@ p {
 }
 
 .projectContainer {
-  margin: 0 auto;
-  max-width: 1291px;
   background-image: url('/images/backgroundProjet.svg');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px;
 }
 
-.projetBackground {
+.projetBackContainer {
+  max-width: 1291px;
+  margin: auto;
+}
+
+.projectBackColor {
   background-color: white;
 }
 
@@ -353,7 +362,6 @@ p {
 }
 
 .projectPicture {
-  box-shadow: -90px 40px 0px rgb(155, 197, 213);
   position: relative;
   z-index: 1;
   width: 75%;
@@ -409,16 +417,23 @@ p {
   
 }
 
-.projectBlock:nth-child(odd) .projectPicture {
-  box-shadow: 90px 40px 0px var(--pink);
+.projectBlock:nth-child(4n + 1) .projectPicture{
+  box-shadow: 90px 40px 0px var(--apple);
 }
 
-.projectBlock:nth-child(3n+0) .projectPicture {
-  margin-top: 40px;
-  box-shadow: 90px 40px 0px var(--greenLight);
+.projectBlock:nth-child(4n + 2) .projectPicture{
+  box-shadow: -90px 40px 0px var(--rosedark);
 }
 
-.
+.projectBlock:nth-child(4n + 3) .projectPicture{
+  box-shadow: 90px 40px 0px var(--jaunedark);
+}
+
+.projectBlock:nth-child(4n + 4) .projectPicture{
+  box-shadow: -90px 40px 0px var(--ciel);
+}
+
+
 /* AJOUT  */
 /* ------- Fin Project --------*/
 
