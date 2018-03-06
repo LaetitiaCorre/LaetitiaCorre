@@ -339,9 +339,10 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px;
+  margin: 0 auto;
 }
 
-.projetBackground {
+.projectBackColor {
   background-color: white;
 }
 
@@ -349,7 +350,6 @@ p {
   display: flex;
   flex-direction: row;
   padding: 80px 60px;
-  margin: 0 auto;
 }
 
 .projectPicture {
