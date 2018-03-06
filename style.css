@@ -334,12 +334,15 @@ p {
 }
 
 .projectContainer {
-  max-width: 1291px;
   background-image: url('/images/backgroundProjet.svg');
   background-repeat: no-repeat;
   background-size: cover;
   padding: 30px;
-  margin: 0 auto;
+}
+
+.projetBackContainer {
+  max-width: 1291px;
+  margin: auto;
 }
 
 .projectBackColor {
