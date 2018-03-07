@@ -458,7 +458,7 @@ p {
   width: 254px;
   height: 250px;
   background-color: var(--pink);
-  border: 1px solid black;
+  border: 1px solid rgb(255, 255, 255);
   background-repeat: no-repeat;
   background-size: 140px auto;
   background-position: center;
