@@ -446,6 +446,7 @@ p {
 .bloc1compé {
   display: flex;
   flex-direction: row;
+  justify-content: center;
 }
 
 .bloc2compé {
