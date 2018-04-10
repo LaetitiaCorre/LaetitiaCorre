@@ -2,6 +2,7 @@
   --apple: #bfda70;
   --rose: #f9c1ce;
   --rosedark: #fbd2d5;
+  --roseFluo: rgb(255, 55, 88);
   --jaune: #fef8bd;
   --jaunedark: #ffdf91;
   --ciel: #bfd6ef;
@@ -31,6 +32,7 @@ html {
 
 body {
   margin: 0;
+  color: var(--greyDark);
 }
 
 a {
@@ -39,7 +41,7 @@ a {
 }
 
 i:hover {
-  color: rgb(255, 55, 88);
+  color: var(--roseFluo);
   opacity: 1;
 }
 
@@ -130,9 +132,8 @@ h1 {
 }
 
 .jumboMenuList a:hover{
-  color: var(--brown) ;
+  color: var(--roseFluo) ;
 }
-
 
 .menuList >li {
   margin-right: 20px;
@@ -224,6 +225,7 @@ h1 {
 .description {
   line-height: var(--mediumLineHeight);
   padding-bottom: 25px;
+  text-align: justify;
 }
 
 .aboutBlock {
@@ -249,7 +251,7 @@ h1 {
 
 .button {
   border-radius: 4px;
-  background-color: #ccf1cf;
+  background-color: var(--jaune);
   width: 50%;
   height: auto;
   padding: 15px;
@@ -257,6 +259,10 @@ h1 {
   font-size: 20px;
   font-weight: bold;
   display: block;
+}
+
+.hoverButton:hover {
+  background-color: var(--blue);
 }
 
 .character {
@@ -418,6 +424,10 @@ p {
 }
 
 .projectBlock:nth-child(4n + 1) .projectPicture{
+  box-shadow: 90px 40px 0px var(--apple);
+}
+
+.projectBlockDes:nth-child(4n + 1) {
   box-shadow: 90px 40px 0px var(--apple);
 }
 
