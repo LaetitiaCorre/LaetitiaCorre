@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "http-server www -o",
-    "deploy": "gh-pages -d www"
+    "deploy": "gh-pages -d www",
+    "css": "node-sass sass/styles.scss www/css/styles.css --watch"
   },
   "author": "",
   "license": "ISC",
@@ -13,5 +14,8 @@
     "gh-pages": "^1.1.0",
     "html-includes": "^1.2.3",
     "http-server": "^0.11.1"
+  },
+  "dependencies": {
+    "node-sass": "^4.9.0"
   }
 }
