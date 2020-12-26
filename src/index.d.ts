@@ -1,0 +1,13 @@
+import "styled-components";
+
+declare module "styled-components" {
+  export interface DefaultTheme {
+    colors: {
+      text: {
+        dark: string;
+        main: string;
+        light: string;
+      };
+    };
+  }
+}
