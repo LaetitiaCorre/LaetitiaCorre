@@ -7,6 +7,7 @@ import {
   AiFillBehanceSquare,
   AiFillFacebook,
 } from "react-icons/ai";
+import { OverlayProvider } from "@react-aria/overlays";
 import "modern-normalize/modern-normalize.css";
 import { theme } from "../theme";
 import { Container } from "./Container";
@@ -92,59 +93,61 @@ export function Layout({ siteMetadata, children }: LayoutProps) {
         />
       </Helmet>
       <GlobalStyle />
-      <Container>
-        <Header>
-          <Link as={RouterLink} to="/">
-            <HeaderLogo
-              src="https://placehold.it/200x200"
-              alt="Photo de Laëtitia Corré"
-            />
-          </Link>
-          <HeaderSiteName>
+      <OverlayProvider>
+        <Container>
+          <Header>
             <Link as={RouterLink} to="/">
-              Laëtitia Corré
+              <HeaderLogo
+                src="https://placehold.it/200x200"
+                alt="Photo de Laëtitia Corré"
+              />
             </Link>
-          </HeaderSiteName>
-        </Header>
-        <Nav>
-          <NavList>
-            <NavListItem>
+            <HeaderSiteName>
               <Link as={RouterLink} to="/">
-                Portfolio
+                Laëtitia Corré
               </Link>
-            </NavListItem>
-            <NavListItem>
-              <Link as={RouterLink} to="/about">
-                À propos
+            </HeaderSiteName>
+          </Header>
+          <Nav>
+            <NavList>
+              <NavListItem>
+                <Link as={RouterLink} to="/">
+                  Portfolio
+                </Link>
+              </NavListItem>
+              <NavListItem>
+                <Link as={RouterLink} to="/about">
+                  À propos
+                </Link>
+              </NavListItem>
+              <NavListItem>
+                <Link href="mailto:laetitia.corre6@gmail.com">Contact</Link>
+              </NavListItem>
+            </NavList>
+          </Nav>
+          <SocialList>
+            <SocialListItem>
+              <Link href="https://google.com">
+                <AiFillInstagram />
               </Link>
-            </NavListItem>
-            <NavListItem>
-              <Link href="mailto:laetitia.corre6@gmail.com">Contact</Link>
-            </NavListItem>
-          </NavList>
-        </Nav>
-        <SocialList>
-          <SocialListItem>
-            <Link href="https://google.com">
-              <AiFillInstagram />
-            </Link>
-          </SocialListItem>
-          <SocialListItem>
-            <Link href="https://google.com">
-              <AiFillBehanceSquare />
-            </Link>
-          </SocialListItem>
-          <SocialListItem>
-            <Link href="https://google.com">
-              <AiFillFacebook />
-            </Link>
-          </SocialListItem>
-        </SocialList>
-      </Container>
-      {children}
-      <Footer>
-        <Container />
-      </Footer>
+            </SocialListItem>
+            <SocialListItem>
+              <Link href="https://google.com">
+                <AiFillBehanceSquare />
+              </Link>
+            </SocialListItem>
+            <SocialListItem>
+              <Link href="https://google.com">
+                <AiFillFacebook />
+              </Link>
+            </SocialListItem>
+          </SocialList>
+        </Container>
+        {children}
+        <Footer>
+          <Container />
+        </Footer>
+      </OverlayProvider>
     </ThemeProvider>
   );
 }

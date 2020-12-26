@@ -1,8 +1,9 @@
 import * as React from "react";
 import { graphql } from "gatsby";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import Masonry from "react-masonry-css";
-import { Layout, Container } from "../components";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
+import { Layout, Container, Lightbox } from "../components";
 
 const MasonryStyle = createGlobalStyle`
 .masonry {
@@ -21,6 +22,29 @@ const MasonryStyle = createGlobalStyle`
   }
 }
 `;
+const MasonryItem = styled.button.attrs({ type: "button" })<{
+  image: string;
+}>`
+  appearance: none;
+  border: 0;
+  background: transparent;
+  display: block;
+  width: 100%;
+  background-image: url(${(props) => props.image});
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+`;
+const ArrowButton = styled.button.attrs({ type: "button" })`
+  appearance: none;
+  background: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+`;
 
 interface PageHomeProps {
   data: {
@@ -34,7 +58,10 @@ interface PageHomeProps {
         node: {
           resize: {
             src: string;
-            height: string;
+            aspectRatio: number;
+          };
+          fluid: {
+            src: string;
           };
         };
       }>;
@@ -43,6 +70,30 @@ interface PageHomeProps {
 }
 
 export default function PageHome({ data }: PageHomeProps) {
+  const [currentImageIndex, setCurrentImageIndex] = React.useState<
+    number | null
+  >(null);
+  const onPrevious = () => {
+    if (currentImageIndex == null) {
+      return;
+    }
+    setCurrentImageIndex(
+      currentImageIndex - 1 < 0
+        ? data.allImageSharp.edges.length - 1
+        : currentImageIndex - 1
+    );
+  };
+  const onNext = () => {
+    if (currentImageIndex == null) {
+      return;
+    }
+    setCurrentImageIndex(
+      currentImageIndex + 1 >= data.allImageSharp.edges.length
+        ? 0
+        : currentImageIndex + 1
+    );
+  };
+
   return (
     <Layout siteMetadata={data.site.siteMetadata}>
       <MasonryStyle />
@@ -57,10 +108,35 @@ export default function PageHome({ data }: PageHomeProps) {
           }}
         >
           {data.allImageSharp.edges.map((edge, index) => (
-            <img key={index} src={edge.node.resize.src} alt="" />
+            <MasonryItem
+              key={index}
+              image={edge.node.resize.src}
+              onClick={() => setCurrentImageIndex(index)}
+              style={{
+                paddingTop: `${edge.node.resize.aspectRatio * 100}%`,
+              }}
+            />
           ))}
         </Masonry>
       </Container>
+      {currentImageIndex != null && (
+        <Lightbox
+          isOpen
+          onClose={() => setCurrentImageIndex(null)}
+          isDismissable
+        >
+          <ArrowButton onClick={onPrevious}>
+            <AiFillCaretLeft />
+          </ArrowButton>
+          <img
+            src={data.allImageSharp.edges[currentImageIndex].node.fluid.src}
+            alt=""
+          />
+          <ArrowButton onClick={onNext}>
+            <AiFillCaretRight />
+          </ArrowButton>
+        </Lightbox>
+      )}
     </Layout>
   );
 }
@@ -75,7 +151,11 @@ export const query = graphql`
     allImageSharp {
       edges {
         node {
-          resize(width: 300) {
+          resize(width: 600) {
+            src
+            aspectRatio
+          }
+          fluid {
             src
           }
         }

@@ -8,6 +8,10 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
+    "@react-aria/dialog": "^3.1.2",
+    "@react-aria/focus": "^3.2.3",
+    "@react-aria/overlays": "^3.6.0",
+    "@react-types/dialog": "^3.3.0",
     "@types/react-helmet": "^6.1.0",
     "@types/styled-components": "^5.1.7",
     "babel-plugin-styled-components": "^1.12.0",
