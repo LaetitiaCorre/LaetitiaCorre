@@ -6,12 +6,14 @@ import {
   AiFillInstagram,
   AiFillBehanceSquare,
   AiFillFacebook,
+  AiFillLinkedin,
 } from "react-icons/ai";
 import { OverlayProvider } from "@react-aria/overlays";
 import "modern-normalize/modern-normalize.css";
 import { theme } from "../theme";
 import { Container } from "./Container";
 import { Link } from "./Link";
+import headerImage from "./assets/header.png";
 
 const GlobalStyle = createGlobalStyle`
 body {
@@ -36,7 +38,8 @@ const Header = styled.header`
   padding: 2rem 0;
 `;
 const HeaderLogo = styled.img`
-  border-radius: 50%;
+  width: 300px;
+  height: auto;
 `;
 const HeaderSiteName = styled.h1`
   font-size: 1.2rem;
@@ -97,10 +100,7 @@ export function Layout({ siteMetadata, children }: LayoutProps) {
         <Container>
           <Header>
             <Link as={RouterLink} to="/">
-              <HeaderLogo
-                src="https://placehold.it/200x200"
-                alt="Photo de Laëtitia Corré"
-              />
+              <HeaderLogo src={headerImage} alt="Portrait de Laëtitia Corré" />
             </Link>
             <HeaderSiteName>
               <Link as={RouterLink} to="/">
@@ -127,18 +127,23 @@ export function Layout({ siteMetadata, children }: LayoutProps) {
           </Nav>
           <SocialList>
             <SocialListItem>
-              <Link href="https://google.com">
+              <Link href="https://www.instagram.com/laetitia.concept_art/">
                 <AiFillInstagram />
               </Link>
             </SocialListItem>
             <SocialListItem>
-              <Link href="https://google.com">
+              <Link href="https://www.behance.net/laetitia-corre">
                 <AiFillBehanceSquare />
               </Link>
             </SocialListItem>
             <SocialListItem>
-              <Link href="https://google.com">
+              <Link href="https://www.facebook.com/lphira">
                 <AiFillFacebook />
+              </Link>
+            </SocialListItem>
+            <SocialListItem>
+              <Link href="https://www.linkedin.com/in/laetitia-corre/">
+                <AiFillLinkedin />
               </Link>
             </SocialListItem>
           </SocialList>

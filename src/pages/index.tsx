@@ -31,7 +31,7 @@ const MasonryItem = styled.button.attrs({ type: "button" })<{
   display: block;
   width: 100%;
   background-image: url(${(props) => props.image});
-  background-position: center;
+  background-position: center top;
   background-size: cover;
   cursor: pointer;
 `;
@@ -113,7 +113,10 @@ export default function PageHome({ data }: PageHomeProps) {
               image={edge.node.resize.src}
               onClick={() => setCurrentImageIndex(index)}
               style={{
-                paddingTop: `${edge.node.resize.aspectRatio * 100}%`,
+                paddingTop: `calc(100% * ${Math.max(
+                  1,
+                  edge.node.resize.aspectRatio
+                )})`,
               }}
             />
           ))}
@@ -151,11 +154,11 @@ export const query = graphql`
     allImageSharp {
       edges {
         node {
-          resize(width: 600) {
+          resize(width: 600, fit: INSIDE, quality: 80) {
             src
             aspectRatio
           }
-          fluid {
+          fluid(maxWidth: 1000, quality: 100) {
             src
           }
         }
